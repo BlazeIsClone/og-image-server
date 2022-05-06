@@ -31,9 +31,9 @@ sudo chmod +x /usr/bin/docker-compose
 
 <VirtualHost *:80>
     ServerName DOMAIN_NAME.TLD
-    DocumentRoot /var/www/html
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
+    DocumentRoot /var/www/frontend
+    ErrorLog ${APACHE_LOG_DIR}/frontend/error.log
+    CustomLog ${APACHE_LOG_DIR}/frontend/access.log combined
 </VirtualHost>
 ```
 
