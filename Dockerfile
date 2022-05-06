@@ -11,8 +11,6 @@ ca-certificates fonts-liberation libnss3 lsb-release xdg-utils wget
 
 RUN apt-get install -y nginx
 
-COPY ./config/nginx.conf /etc/nginx/conf.d/default.conf
-
 COPY . /app
 
 RUN npm install
