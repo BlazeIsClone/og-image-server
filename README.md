@@ -22,17 +22,18 @@ sudo chmod +x /usr/bin/docker-compose
 
 ```conf
 <VirtualHost *:80>
-    ServerAdmin webmaster@localhost
-    ServerName api.DOMAIN_NAME.xyz
-    ProxyPreserveHost On
-
-    # setup the proxy
-    <Proxy *>
-        Order allow,deny
-        Allow from all
-    </Proxy>
+    ServerName api.DOMAIN_NAME.TLD
+    ProxyPreserveHost on
+    ProxyRequests off
     ProxyPass / http://IP_ADDRESS:8080/
     ProxyPassReverse / http://IP_ADDRESS:8080/
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerName DOMAIN_NAME.TLD
+    DocumentRoot /var/www/html
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
 
