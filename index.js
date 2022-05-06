@@ -11,7 +11,7 @@ const port = 3080;
 const API = process.env.API_ENTRY_POINT;
 const endpoint = `${API}/theme`;
 
-app.get("/og-image", async (req, res) => {
+app.get("/", async (req, res) => {
   const { title } = url.parse(req.url, true).query;
 
   const browser = await chromium.puppeteer.launch({
