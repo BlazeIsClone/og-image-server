@@ -1,4 +1,4 @@
-const renderString = (encodedString) => encodedString.replace(/\*/g, " ");
+const renderString = (encodedString) => decodeURIComponent(encodedString);
 
 const template = (themeData, title) => {
   return `<html>
