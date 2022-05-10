@@ -2,7 +2,10 @@
 
 ## Install Docker Engine
 
-[Install Docker Engine](https://docs.docker.com/engine/install/)
+```bash
+ curl -fsSL https://get.docker.com -o get-docker.sh
+ sudo sh get-docker.sh
+```
 
 ## Install Docker-Compose
 
